@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Danke für deine Bestellung</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 40px;
+    }
+    .box {
+      background: #f0f0f0;
+      border-radius: 12px;
+      padding: 30px;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>Vielen Dank!</h1>
+    <p>Deine Bestellung wurde erfolgreich übermittelt.</p>
+    <p>Das BM-Team wird deine Bestellung abhängig von der Verfügbarkeit bearbeiten.</p>
+  </div>
+</body>
+</html>
