@@ -1,22 +1,33 @@
 ﻿<!DOCTYPE html>
 <html lang='de'>
 <head>
-    <meta charset='UTF-8'>
-    <title>Filialbestellung</title>
-    <style>
-        body { font-family: Arial; margin: 20px; }
-        img { max-height: 100px; }
-        .artikel { border: 1px solid #ccc; padding: 10px; margin-bottom: 10px; border-radius: 8px; }
-    </style>
+<meta charset='UTF-8'>
+<title>Filialbestellung</title>
+<style>
+body { font-family: Arial; margin: 20px; }
+img { max-height: 100px; }
+.artikel { border: 1px solid #ccc; padding: 10px; margin-bottom: 10px; border-radius: 8px; }
+.teamgruppe { margin-top: 30px; }
+</style>
+<script>
+function switchLanguage(lang) {
+  document.getElementById('form-de').style.display = (lang === 'de') ? 'block' : 'none';
+  document.getElementById('form-nl').style.display = (lang === 'nl') ? 'block' : 'none';
+  document.getElementById('form-en').style.display = (lang === 'en') ? 'block' : 'none';
+}
+</script>
 </head>
 <body>
+<button onclick="switchLanguage('de')">Deutsch</button> <button onclick="switchLanguage('nl')">Nederlands</button> <button onclick="switchLanguage('en')">English</button>
+<div id='form-de'>
 <h1>Nachbestellung für Filialen</h1>
-<img src='https://assets.kununu.com/media/prod/profiles/logos/1a14eb74-0eb5-42ea-98ef-25c1c4e9d951_1_66043190c3cf9.gif' alt='Logo'><br><br><br>
+<img src='https://assets.kununu.com/media/prod/profiles/logos/1a14eb74-0eb5-42ea-98ef-25c1c4e9d951_1_66043190c3cf9.gif'><br><br>
 <form method='POST' action='https://formsubmit.co/3080c87694b454ca3fb500ee360b3466'>
 <input type='hidden' name='_captcha' value='false'>
 <input type='hidden' name='_next' value='https://cgripopken.github.io/Filialbestellung/thankyou.html'>
 <label for='filiale'>Filialnummer:</label><br>
-<input type='text' id='filiale' name='Filialnummer' required><br><br>
+<input type='text' name='Filialnummer' required><br><br>
+<div class='teamgruppe'><h2>Team: modern view</h2></div>
 <div class='artikel'>
 <strong>Artikelnummer:</strong> 819237100<br>
 <strong>Team:</strong> modern view<br>
@@ -31,6 +42,7 @@
 <img src='https://assets.ullapopken.de/images/products/830387770.jpg' alt='Plisseerock Batic Druck'><br>
 <label>Menge:</label> <input type='number' name='830387770' min='0'><br>
 </div>
+<div class='teamgruppe'><h2>Team: CASUAL</h2></div>
 <div class='artikel'>
 <strong>Artikelnummer:</strong> 818719150<br>
 <strong>Team:</strong> CASUAL<br>
@@ -94,6 +106,7 @@
 <img src='https://assets.ullapopken.de/images/products/830264740.jpg' alt='Bluse mit Kaputze'><br>
 <label>Menge:</label> <input type='number' name='830264740' min='0'><br>
 </div>
+<div class='teamgruppe'><h2>Team: Basics</h2></div>
 <div class='artikel'>
 <strong>Artikelnummer:</strong> 807294740<br>
 <strong>Team:</strong> Basics<br>
@@ -115,6 +128,7 @@
 <img src='https://assets.ullapopken.de/images/products/807294815.jpg' alt='Top Carree-Neck'><br>
 <label>Menge:</label> <input type='number' name='807294815' min='0'><br>
 </div>
+<div class='teamgruppe'><h2>Team: UP Sport</h2></div>
 <div class='artikel'>
 <strong>Artikelnummer:</strong> 826482654<br>
 <strong>Team:</strong> UP Sport<br>
@@ -130,6 +144,258 @@
 <label>Menge:</label> <input type='number' name='826541100' min='0'><br>
 </div>
 <button type='submit'>Bestellung absenden</button>
-</form>
+</form></div>
+<div id='form-nl' style='display:none;'>
+<h1>Bestelling voor filialen</h1>
+<img src='https://assets.kununu.com/media/prod/profiles/logos/1a14eb74-0eb5-42ea-98ef-25c1c4e9d951_1_66043190c3cf9.gif'><br><br>
+<form method='POST' action='https://formsubmit.co/3080c87694b454ca3fb500ee360b3466'>
+<input type='hidden' name='_captcha' value='false'>
+<input type='hidden' name='_next' value='https://cgripopken.github.io/Filialbestellung/thankyounl.html'>
+<label for='filiale'>Filiaalnummer:</label><br>
+<input type='text' name='Filialnummer' required><br><br>
+<div class='teamgruppe'><h2>Team: modern view</h2></div>
+<div class='artikel'>
+<strong>Artikelnummer:</strong> 819237100<br>
+<strong>Team:</strong> modern view<br>
+<strong>Omschrijving:</strong> T-Shirt<br>
+<img src='https://assets.ullapopken.de/images/products/819237100.jpg' alt='T-Shirt'><br>
+<label>Aantal:</label> <input type='number' name='819237100' min='0'><br>
+</div>
+<div class='artikel'>
+<strong>Artikelnummer:</strong> 830387770<br>
+<strong>Team:</strong> modern view<br>
+<strong>Omschrijving:</strong> Plisseerock Batic Druck<br>
+<img src='https://assets.ullapopken.de/images/products/830387770.jpg' alt='Plisseerock Batic Druck'><br>
+<label>Aantal:</label> <input type='number' name='830387770' min='0'><br>
+</div>
+<div class='teamgruppe'><h2>Team: CASUAL</h2></div>
+<div class='artikel'>
+<strong>Artikelnummer:</strong> 818719150<br>
+<strong>Team:</strong> CASUAL<br>
+<strong>Omschrijving:</strong> Tunika<br>
+<img src='https://assets.ullapopken.de/images/products/818719150.jpg' alt='Tunika'><br>
+<label>Aantal:</label> <input type='number' name='818719150' min='0'><br>
+</div>
+<div class='artikel'>
+<strong>Artikelnummer:</strong> 821513902<br>
+<strong>Team:</strong> CASUAL<br>
+<strong>Omschrijving:</strong> Lyocell-Kleid<br>
+<img src='https://assets.ullapopken.de/images/products/821513902.jpg' alt='Lyocell-Kleid'><br>
+<label>Aantal:</label> <input type='number' name='821513902' min='0'><br>
+</div>
+<div class='artikel'>
+<strong>Artikelnummer:</strong> 827004100<br>
+<strong>Team:</strong> CASUAL<br>
+<strong>Omschrijving:</strong> T-Shirt mit Herzausschnitt, bedruckt<br>
+<img src='https://assets.ullapopken.de/images/products/827004100.jpg' alt='T-Shirt mit Herzausschnitt, bedruckt'><br>
+<label>Aantal:</label> <input type='number' name='827004100' min='0'><br>
+</div>
+<div class='artikel'>
+<strong>Artikelnummer:</strong> 828333110<br>
+<strong>Team:</strong> CASUAL<br>
+<strong>Omschrijving:</strong>  T-Shirt mit floralem Druck, Classic<br>
+<img src='https://assets.ullapopken.de/images/products/828333110.jpg' alt=' T-Shirt mit floralem Druck, Classic'><br>
+<label>Aantal:</label> <input type='number' name='828333110' min='0'><br>
+</div>
+<div class='artikel'>
+<strong>Artikelnummer:</strong> 829227902<br>
+<strong>Team:</strong> CASUAL<br>
+<strong>Omschrijving:</strong> Lange Bermuda Mandy mit Palmen<br>
+<img src='https://assets.ullapopken.de/images/products/829227902.jpg' alt='Lange Bermuda Mandy mit Palmen'><br>
+<label>Aantal:</label> <input type='number' name='829227902' min='0'><br>
+</div>
+<div class='artikel'>
+<strong>Artikelnummer:</strong> 829656750<br>
+<strong>Team:</strong> CASUAL<br>
+<strong>Omschrijving:</strong> Shirt, classic, verspielter Ärmel<br>
+<img src='https://assets.ullapopken.de/images/products/829656750.jpg' alt='Shirt, classic, verspielter Ärmel'><br>
+<label>Aantal:</label> <input type='number' name='829656750' min='0'><br>
+</div>
+<div class='artikel'>
+<strong>Artikelnummer:</strong> 830247740<br>
+<strong>Team:</strong> CASUAL<br>
+<strong>Omschrijving:</strong> Kleid mit besonderem Saum<br>
+<img src='https://assets.ullapopken.de/images/products/830247740.jpg' alt='Kleid mit besonderem Saum'><br>
+<label>Aantal:</label> <input type='number' name='830247740' min='0'><br>
+</div>
+<div class='artikel'>
+<strong>Artikelnummer:</strong> 830260740<br>
+<strong>Team:</strong> CASUAL<br>
+<strong>Omschrijving:</strong> Shorts mit aufgesetzten Taschen<br>
+<img src='https://assets.ullapopken.de/images/products/830260740.jpg' alt='Shorts mit aufgesetzten Taschen'><br>
+<label>Aantal:</label> <input type='number' name='830260740' min='0'><br>
+</div>
+<div class='artikel'>
+<strong>Artikelnummer:</strong> 830264740<br>
+<strong>Team:</strong> CASUAL<br>
+<strong>Omschrijving:</strong> Bluse mit Kaputze<br>
+<img src='https://assets.ullapopken.de/images/products/830264740.jpg' alt='Bluse mit Kaputze'><br>
+<label>Aantal:</label> <input type='number' name='830264740' min='0'><br>
+</div>
+<div class='teamgruppe'><h2>Team: Basics</h2></div>
+<div class='artikel'>
+<strong>Artikelnummer:</strong> 807294740<br>
+<strong>Team:</strong> Basics<br>
+<strong>Omschrijving:</strong> Top Carree-Neck<br>
+<img src='https://assets.ullapopken.de/images/products/807294740.jpg' alt='Top Carree-Neck'><br>
+<label>Aantal:</label> <input type='number' name='807294740' min='0'><br>
+</div>
+<div class='artikel'>
+<strong>Artikelnummer:</strong> 807294744<br>
+<strong>Team:</strong> Basics<br>
+<strong>Omschrijving:</strong> Top Carree-Neck<br>
+<img src='https://assets.ullapopken.de/images/products/807294744.jpg' alt='Top Carree-Neck'><br>
+<label>Aantal:</label> <input type='number' name='807294744' min='0'><br>
+</div>
+<div class='artikel'>
+<strong>Artikelnummer:</strong> 807294815<br>
+<strong>Team:</strong> Basics<br>
+<strong>Omschrijving:</strong> Top Carree-Neck<br>
+<img src='https://assets.ullapopken.de/images/products/807294815.jpg' alt='Top Carree-Neck'><br>
+<label>Aantal:</label> <input type='number' name='807294815' min='0'><br>
+</div>
+<div class='teamgruppe'><h2>Team: UP Sport</h2></div>
+<div class='artikel'>
+<strong>Artikelnummer:</strong> 826482654<br>
+<strong>Team:</strong> UP Sport<br>
+<strong>Omschrijving:</strong> Badekleid, Lola, Makramee palmen<br>
+<img src='https://assets.ullapopken.de/images/products/826482654.jpg' alt='Badekleid, Lola, Makramee palmen'><br>
+<label>Aantal:</label> <input type='number' name='826482654' min='0'><br>
+</div>
+<div class='artikel'>
+<strong>Artikelnummer:</strong> 826541100<br>
+<strong>Team:</strong> UP Sport<br>
+<strong>Omschrijving:</strong> Tankini, Rebecca, Zitronenombre<br>
+<img src='https://assets.ullapopken.de/images/products/826541100.jpg' alt='Tankini, Rebecca, Zitronenombre'><br>
+<label>Aantal:</label> <input type='number' name='826541100' min='0'><br>
+</div>
+<button type='submit'>Bestelling versturen</button>
+</form></div>
+<div id='form-en' style='display:none;'>
+<h1>Store Reorder Form</h1>
+<img src='https://assets.kununu.com/media/prod/profiles/logos/1a14eb74-0eb5-42ea-98ef-25c1c4e9d951_1_66043190c3cf9.gif'><br><br>
+<form method='POST' action='https://formsubmit.co/3080c87694b454ca3fb500ee360b3466'>
+<input type='hidden' name='_captcha' value='false'>
+<input type='hidden' name='_next' value='https://cgripopken.github.io/Filialbestellung/thankyouen.html'>
+<label for='filiale'>Store Number:</label><br>
+<input type='text' name='Filialnummer' required><br><br>
+<div class='teamgruppe'><h2>Team: modern view</h2></div>
+<div class='artikel'>
+<strong>Article Number:</strong> 819237100<br>
+<strong>Team:</strong> modern view<br>
+<strong>Description:</strong> T-Shirt<br>
+<img src='https://assets.ullapopken.de/images/products/819237100.jpg' alt='T-Shirt'><br>
+<label>Quantity:</label> <input type='number' name='819237100' min='0'><br>
+</div>
+<div class='artikel'>
+<strong>Article Number:</strong> 830387770<br>
+<strong>Team:</strong> modern view<br>
+<strong>Description:</strong> Plisseerock Batic Druck<br>
+<img src='https://assets.ullapopken.de/images/products/830387770.jpg' alt='Plisseerock Batic Druck'><br>
+<label>Quantity:</label> <input type='number' name='830387770' min='0'><br>
+</div>
+<div class='teamgruppe'><h2>Team: CASUAL</h2></div>
+<div class='artikel'>
+<strong>Article Number:</strong> 818719150<br>
+<strong>Team:</strong> CASUAL<br>
+<strong>Description:</strong> Tunika<br>
+<img src='https://assets.ullapopken.de/images/products/818719150.jpg' alt='Tunika'><br>
+<label>Quantity:</label> <input type='number' name='818719150' min='0'><br>
+</div>
+<div class='artikel'>
+<strong>Article Number:</strong> 821513902<br>
+<strong>Team:</strong> CASUAL<br>
+<strong>Description:</strong> Lyocell-Kleid<br>
+<img src='https://assets.ullapopken.de/images/products/821513902.jpg' alt='Lyocell-Kleid'><br>
+<label>Quantity:</label> <input type='number' name='821513902' min='0'><br>
+</div>
+<div class='artikel'>
+<strong>Article Number:</strong> 827004100<br>
+<strong>Team:</strong> CASUAL<br>
+<strong>Description:</strong> T-Shirt mit Herzausschnitt, bedruckt<br>
+<img src='https://assets.ullapopken.de/images/products/827004100.jpg' alt='T-Shirt mit Herzausschnitt, bedruckt'><br>
+<label>Quantity:</label> <input type='number' name='827004100' min='0'><br>
+</div>
+<div class='artikel'>
+<strong>Article Number:</strong> 828333110<br>
+<strong>Team:</strong> CASUAL<br>
+<strong>Description:</strong>  T-Shirt mit floralem Druck, Classic<br>
+<img src='https://assets.ullapopken.de/images/products/828333110.jpg' alt=' T-Shirt mit floralem Druck, Classic'><br>
+<label>Quantity:</label> <input type='number' name='828333110' min='0'><br>
+</div>
+<div class='artikel'>
+<strong>Article Number:</strong> 829227902<br>
+<strong>Team:</strong> CASUAL<br>
+<strong>Description:</strong> Lange Bermuda Mandy mit Palmen<br>
+<img src='https://assets.ullapopken.de/images/products/829227902.jpg' alt='Lange Bermuda Mandy mit Palmen'><br>
+<label>Quantity:</label> <input type='number' name='829227902' min='0'><br>
+</div>
+<div class='artikel'>
+<strong>Article Number:</strong> 829656750<br>
+<strong>Team:</strong> CASUAL<br>
+<strong>Description:</strong> Shirt, classic, verspielter Ärmel<br>
+<img src='https://assets.ullapopken.de/images/products/829656750.jpg' alt='Shirt, classic, verspielter Ärmel'><br>
+<label>Quantity:</label> <input type='number' name='829656750' min='0'><br>
+</div>
+<div class='artikel'>
+<strong>Article Number:</strong> 830247740<br>
+<strong>Team:</strong> CASUAL<br>
+<strong>Description:</strong> Kleid mit besonderem Saum<br>
+<img src='https://assets.ullapopken.de/images/products/830247740.jpg' alt='Kleid mit besonderem Saum'><br>
+<label>Quantity:</label> <input type='number' name='830247740' min='0'><br>
+</div>
+<div class='artikel'>
+<strong>Article Number:</strong> 830260740<br>
+<strong>Team:</strong> CASUAL<br>
+<strong>Description:</strong> Shorts mit aufgesetzten Taschen<br>
+<img src='https://assets.ullapopken.de/images/products/830260740.jpg' alt='Shorts mit aufgesetzten Taschen'><br>
+<label>Quantity:</label> <input type='number' name='830260740' min='0'><br>
+</div>
+<div class='artikel'>
+<strong>Article Number:</strong> 830264740<br>
+<strong>Team:</strong> CASUAL<br>
+<strong>Description:</strong> Bluse mit Kaputze<br>
+<img src='https://assets.ullapopken.de/images/products/830264740.jpg' alt='Bluse mit Kaputze'><br>
+<label>Quantity:</label> <input type='number' name='830264740' min='0'><br>
+</div>
+<div class='teamgruppe'><h2>Team: Basics</h2></div>
+<div class='artikel'>
+<strong>Article Number:</strong> 807294740<br>
+<strong>Team:</strong> Basics<br>
+<strong>Description:</strong> Top Carree-Neck<br>
+<img src='https://assets.ullapopken.de/images/products/807294740.jpg' alt='Top Carree-Neck'><br>
+<label>Quantity:</label> <input type='number' name='807294740' min='0'><br>
+</div>
+<div class='artikel'>
+<strong>Article Number:</strong> 807294744<br>
+<strong>Team:</strong> Basics<br>
+<strong>Description:</strong> Top Carree-Neck<br>
+<img src='https://assets.ullapopken.de/images/products/807294744.jpg' alt='Top Carree-Neck'><br>
+<label>Quantity:</label> <input type='number' name='807294744' min='0'><br>
+</div>
+<div class='artikel'>
+<strong>Article Number:</strong> 807294815<br>
+<strong>Team:</strong> Basics<br>
+<strong>Description:</strong> Top Carree-Neck<br>
+<img src='https://assets.ullapopken.de/images/products/807294815.jpg' alt='Top Carree-Neck'><br>
+<label>Quantity:</label> <input type='number' name='807294815' min='0'><br>
+</div>
+<div class='teamgruppe'><h2>Team: UP Sport</h2></div>
+<div class='artikel'>
+<strong>Article Number:</strong> 826482654<br>
+<strong>Team:</strong> UP Sport<br>
+<strong>Description:</strong> Badekleid, Lola, Makramee palmen<br>
+<img src='https://assets.ullapopken.de/images/products/826482654.jpg' alt='Badekleid, Lola, Makramee palmen'><br>
+<label>Quantity:</label> <input type='number' name='826482654' min='0'><br>
+</div>
+<div class='artikel'>
+<strong>Article Number:</strong> 826541100<br>
+<strong>Team:</strong> UP Sport<br>
+<strong>Description:</strong> Tankini, Rebecca, Zitronenombre<br>
+<img src='https://assets.ullapopken.de/images/products/826541100.jpg' alt='Tankini, Rebecca, Zitronenombre'><br>
+<label>Quantity:</label> <input type='number' name='826541100' min='0'><br>
+</div>
+<button type='submit'>Submit Order</button>
+</form></div>
 </body>
 </html>
